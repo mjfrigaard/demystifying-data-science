@@ -15,7 +15,7 @@ output:
 
 
 
-## Data Science as a Workflow for Insight and Automation
+## Data Visualization for Insight 
 
 ```{r 01-slide-image-01, fig.height=2.5, fig.width=2.5, echo=FALSE}
 knitr::include_graphics(path = "figs/01-slide-image-01.png")
@@ -83,7 +83,7 @@ It's assumed that you know about your products/services, the competition, and yo
 
 The key to using data successfully is 1) finding the right data and 2) knowing what attributes are important to your business.
 
-If the right data are being measudarkred, and we can clearly define the problem, then data science can help.
+If the right data are being measured, and we can clearly define the problem, then data science can help.
 
 </aside>
 
@@ -103,7 +103,7 @@ Be able to articulate, <b>“what problem are we facing?”</b>
 
 <aside class="notes">
 
-What decision needs to be made? What problem needs to be figudarkred out? What numbers need to be calculated?  What is the "main thing"? Is it to darkreduce acquisition costs, increasing engagement, etc.? Remember, the main thing is to keep the main thing the main thing.
+What decision needs to be made? What problem needs to be figured out? What numbers need to be calculated?  What is the "main thing"? Is it to reduce acquisition costs, increasing engagement, etc.? Remember, the main thing is to keep the main thing the main thing.
 
 </aside>
 
@@ -113,7 +113,7 @@ What decision needs to be made? What problem needs to be figudarkred out? What n
 
 <div style="color:darkred;margin:20px;margin-top:50px;" >
 
-Understand what's been measudarkred, i.e. <b>“what are the data?”</b>
+Understand what's been measured, i.e. <b>“what are the data?”</b>
 
 </div>
 
@@ -123,9 +123,9 @@ Understand what's been measudarkred, i.e. <b>“what are the data?”</b>
 
 <aside class="notes">
 
-What have we measudarkred? What still needs to be measudarkred? What can we do with the data we have? What new data will we need when we've used everything we have?
+What have we measured? What still needs to be measured? What can we do with the data we have? What new data will we need when we've used everything we have?
 
-Are you looking for answers based on the data you have, or based on the problem/question? It is possible that the important question you’re facing can’t be answedarkred with the data you have (this just means the new problem becomes, "how to collect the data you need?")
+Are you looking for answers based on the data you have, or based on the problem/question? It is possible that the important question you’re facing can’t be answered with the data you have (this just means the new problem becomes, "how to collect the data you need?")
 
 </aside>
 
@@ -138,7 +138,7 @@ Are you looking for answers based on the data you have, or based on the problem/
 
 The hardest part of data science is translating a problem into a question that data can answer (and then finding those data).
 
-Example measurable objective: <b>“Identify pdarkredictors for customer churn.”</b>
+Example measurable objective: <b>“Identify predictors for customer churn.”</b>
 
 </div>
 
@@ -248,7 +248,7 @@ Customer churn is greatest among customers within the first 20 months of purchas
 
 <aside class="notes">
 
-~60% of customers cancel within the first month compadarkred with ~ 30% at month 12
+~60% of customers cancel within the first month compared with ~ 30% at month 12
 
 With this data we can’t say how long we can expect a customer to stay if they don’t cancel within the first year, however,
 
