@@ -65,7 +65,7 @@ Using data effectively requires <b>both data and domain knowledge</b> (one will 
 <i> -- click "S" to view speaker notes </i> 
 </p>
 
-<div class="notes">
+<aside class="notes">
 
 It's assumed that you know about your products/services, the competition, and your customers. In order to use data to improve decision-making, you'll need to understand how to properly leverage what you already know about a topic (i.e. the domain knowledge). Computers can run models, but they can't tell you what's important.
 
@@ -73,7 +73,7 @@ The key to using data successfully is 1) finding the right data and 2) knowing w
 
 If the right data are being measured, and we can clearly define the problem, then data science can help.
 
-</div>
+</aside>
 
 ## Computation Is Not Decision Making (2)
 
@@ -89,11 +89,11 @@ Be able to articulate, <i>“what problem are we facing?”</i>
 <i> -- click "S" to view speaker notes </i> 
 </p>
 
-<div class="notes">
+<aside class="notes">
 
 What decision needs to be made? What problem needs to be figured out? What numbers need to be calculated?  What is the "main thing"? Is it to reduce acquisition costs, increasing engagement, etc.? Remember, the main thing is to keep the main thing the main thing.
 
-</div>
+</aside>
 
 ## Computation Is Not Decision Making (3)
 
@@ -109,13 +109,13 @@ Understand what's been measured, i.e. <b>“what are the data?”</b>
 <i> -- click "S" to view speaker notes </i> 
 </p>
 
-<div class="notes">
+<aside class="notes">
 
 What have we measured? What still needs to be measured? What can we do with the data we have? What new data will we need when we've used everything we have?
 
 Are you looking for answers based on the data you have, or based on the problem/question? It is possible that the important question you’re facing can’t be answered with the data you have (this just means the new problem becomes, "how to collect the data you need?")
 
-</div>
+</aside>
 
 
 ## Computation Is Not Decision Making (4)
@@ -134,7 +134,7 @@ Example measurable objective: “identify predictors for customer churn.”
 <i> -- click "S" to view speaker notes </i> 
 </p>
 
-<div class="notes">
+<aside class="notes">
 
 Other examples: 
 
@@ -145,7 +145,7 @@ Who should we target with our new product/service?
 
 The hardest part of using data to solve problems is asking questions in a way that a computer can answer them. We need to ask the question in a way where we can leverage the power of computation--this means fitting our objectives into a series of steps that a computer can execute.
 
-</div>
+</aside>
 
 
 
