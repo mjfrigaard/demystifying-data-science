@@ -303,7 +303,7 @@ What about paperless billing might impact churn? Paperless customers may see vie
 
 </aside>
 
-## Sizing supports our stakeholders 
+## Visualizations engage stakeholders 
 
 <div style="color:darkblue;margin:20px;margin-top:50px;" >
 
@@ -314,4 +314,12 @@ Learnings:
 2. Payment method and billing are associated with increased churn risk 
 
 3. Customer segmentation reveals specific opportunities in the data
+
+<aside class="notes">
+
+Each visualization corresponds to a meaningful conversation with a partner in your company. 
+
+Good visualizations stimulate cross-functional conversations.
+
+</aside>
 
