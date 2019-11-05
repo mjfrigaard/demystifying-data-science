@@ -1,3 +1,6 @@
 
 
 https://forestry.io/blog/harness-the-power-of-static-to-create-presentations/
+
+
+http://slides.drublic.de/awesome-code/#/
