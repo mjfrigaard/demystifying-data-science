@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Paradigm Data Group" />
+  <meta name="dcterms.date" content="2019-11-04" />
   <title>Demystifying data science</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -452,7 +453,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <section>
     <h1 class="title">Demystifying data science</h1>
     <h2 class="author">Paradigm Data Group</h2>
-    <h3 class="date">11/4/2019</h3>
+    <h3 class="date">2019-11-04</h3>
 </section>
 
 <section id="data-science-as-a-workflow-for-insight-and-automation" class="slide level2">
@@ -488,8 +489,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </section>
 <section id="computation-is-not-decision-making-1" class="slide level2">
 <h2>Computation Is Not Decision Making (1)</h2>
-<h3 id="improving-business-decisions">1. Improving business decisions</h3>
-<div style="color:darkred;margin:20px;margin-top:50px;">
+<h3 id="improving-business-decisions">Improving business decisions</h3>
+<div style="color:red;margin:20px;margin-top:50px;">
 <p>Using data effectively requires <b>both data and domain knowledge</b> (one will not suffice).</p>
 </div>
 <p style="margin:10px;font-size:70%;">
@@ -503,9 +504,9 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </section>
 <section id="computation-is-not-decision-making-2" class="slide level2">
 <h2>Computation Is Not Decision Making (2)</h2>
-<h3 id="set-the-stage">2. Set the stage</h3>
-<div style="color:darkblue;margin:20px;margin-top:50px;">
-<p>Be able to articulate, <i>“what problem are we facing?”</i></p>
+<h3 id="set-the-stage">Set the stage</h3>
+<div style="color:blue;margin:20px;margin-top:50px;">
+<p>Be able to articulate, <b>“what problem are we facing?”</b></p>
 </div>
 <p style="margin:10px;font-size:70%;">
 <i> – click “S” to view speaker notes </i>
@@ -516,8 +517,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </section>
 <section id="computation-is-not-decision-making-3" class="slide level2">
 <h2>Computation Is Not Decision Making (3)</h2>
-<h3 id="know-the-characters-in-the-story">3. Know the characters in the story</h3>
-<div style="color:darkred;margin:20px;margin-top:50px;">
+<h3 id="know-the-characters-in-the-story">Know the characters in the story</h3>
+<div style="color:red;margin:20px;margin-top:50px;">
 <p>Understand what’s been measured, i.e. <b>“what are the data?”</b></p>
 </div>
 <p style="margin:10px;font-size:70%;">
@@ -530,10 +531,10 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </section>
 <section id="computation-is-not-decision-making-4" class="slide level2">
 <h2>Computation Is Not Decision Making (4)</h2>
-<h3 id="connect-the-business-problem-to-a-measurable-objective">4. Connect the business problem to a measurable objective</h3>
-<div style="color:darkblue;margin:20px;margin-top:50px;">
+<h3 id="connect-the-business-problem-to-a-measurable-objective">Connect the business problem to a measurable objective</h3>
+<div style="color:blue;margin:20px;margin-top:50px;">
 <p>The hardest part of data science is translating a problem into a question that data can answer (and then finding those data).</p>
-<p>Example measurable objective: “identify predictors for customer churn.”</p>
+<p>Example measurable objective: <b>“Identify predictors for customer churn.”</b></p>
 </div>
 <p style="margin:10px;font-size:70%;">
 <i> – click “S” to view speaker notes </i>
@@ -545,6 +546,45 @@ Have this customer’s buying patterns changed? If so, how?<br />
 How does the location of our products affect purchasing behaviors?<br />
 Who should we target with our new product/service?</p>
 <p>The hardest part of using data to solve problems is asking questions in a way that a computer can answer them. We need to ask the question in a way where we can leverage the power of computation–this means fitting our objectives into a series of steps that a computer can execute.</p>
+</aside>
+</section>
+<section id="visualizing-the-process" class="slide level2">
+<h2>Visualizing the process</h2>
+<div style="color:red;margin:20px;margin-top:50px;">
+<p><strong><em>Step 1: Look at your data</em></strong></p>
+</div>
+<p><img src="figs/03-eda-01.png"></p>
+<aside class="notes">
+<p>Before making any calculations, creating any charts, or running any models, make sure you’ve taken the time to look at the raw data. Open it in a spreadsheet, look at the columns and rows. This will give you a mental model going forward of what you’re dealing with.</p>
+</aside>
+</section>
+<section id="visualizing-the-process-1" class="slide level2">
+<h2>Visualizing the process</h2>
+<div style="color:green;margin:20px;margin-top:50px;">
+<p><em>Step 1: Look at your data</em></p>
+</div>
+<div style="color:red;margin:20px;margin-top:50px;">
+<p><strong><em>Step 2: Get some numbers</em></strong></p>
+</div>
+<p><img src="figs/03-eda-02.png"></p>
+<aside class="notes">
+<p>The second step is to calculate some summary statistics about these data. Means, medians, standard deviations, minimums, maximums, etc. These give us something to think about and equips us with some language for describing the measurements (i.e. “our average customer tenure is…”).</p>
+</aside>
+</section>
+<section id="visualizing-the-process-2" class="slide level2">
+<h2>Visualizing the process</h2>
+<div style="color:green;margin:20px;margin-top:50px;">
+<p><em>Step 1: Look at your data</em></p>
+</div>
+<div style="color:green;margin:20px;margin-top:50px;">
+<p><em>Step 2: Get some numbers</em></p>
+</div>
+<div style="color:red;margin:20px;margin-top:50px;">
+<p><strong><em>Step 3: Make a graph</em></strong></p>
+</div>
+<p><img src="figs/03-eda-03.png"></p>
+<aside class="notes">
+<p>The third step is to create visualizations for the data. This is the most important step, because visualization is an essentially human activity. A computer can’t interpret a graph, or be surprised by it. Pictures and images are how humans make sense of complex systems. Data are too complicated to be understood as bits of information in a spreadsheet–leave that to the computer. Get comfortable exploring the relationships between measurements using data visualizations.</p>
 </aside>
 </section>
     </div>

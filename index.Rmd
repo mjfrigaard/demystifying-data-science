@@ -1,7 +1,7 @@
 ---
 title: "Demystifying data science"
 author: "Paradigm Data Group"
-date: "11/4/2019"
+date: "`r Sys.Date()`"
 output: 
   revealjs::revealjs_presentation:
     theme: simple
@@ -52,9 +52,9 @@ knitr::include_graphics(path = "figs/01-slide-image-01.png")
   
 ## Computation Is Not Decision Making (1)
 
-### 1. Improving business decisions
+### Improving business decisions
 
-<div style="color:darkred;margin:20px;margin-top:50px;" >
+<div style="color:red;margin:20px;margin-top:50px;" >
 
 Using data effectively requires <b>both data and domain knowledge</b> (one will not suffice).
 
@@ -77,11 +77,11 @@ If the right data are being measured, and we can clearly define the problem, the
 
 ## Computation Is Not Decision Making (2)
 
-### 2. Set the stage 
+### Set the stage 
 
-<div style="color:darkblue;margin:20px;margin-top:50px;" >
+<div style="color:blue;margin:20px;margin-top:50px;" >
 
-Be able to articulate, <i>“what problem are we facing?”</i>
+Be able to articulate, <b>“what problem are we facing?”</b>
 
 </div>
 
@@ -97,9 +97,9 @@ What decision needs to be made? What problem needs to be figured out? What numbe
 
 ## Computation Is Not Decision Making (3)
 
-### 3. Know the characters in the story
+### Know the characters in the story
 
-<div style="color:darkred;margin:20px;margin-top:50px;" >
+<div style="color:red;margin:20px;margin-top:50px;" >
 
 Understand what's been measured, i.e. <b>“what are the data?”</b>
 
@@ -120,13 +120,13 @@ Are you looking for answers based on the data you have, or based on the problem/
 
 ## Computation Is Not Decision Making (4)
 
-### 4. Connect the business problem to a measurable objective
+### Connect the business problem to a measurable objective
 
-<div style="color:darkblue;margin:20px;margin-top:50px;" >
+<div style="color:blue;margin:20px;margin-top:50px;" >
 
 The hardest part of data science is translating a problem into a question that data can answer (and then finding those data).
 
-Example measurable objective: “identify predictors for customer churn.”
+Example measurable objective: <b>“Identify predictors for customer churn.”</b>
 
 </div>
 
@@ -147,5 +147,59 @@ The hardest part of using data to solve problems is asking questions in a way th
 
 </aside>
 
+## Visualizing the process
 
+<div style="color:red;margin:20px;margin-top:50px;" >
+***Step 1: Look at your data***
+</div>
+
+<img src="figs/03-eda-01.png">
+
+<aside class="notes">
+
+Before making any calculations, creating any charts, or running any models, make sure you’ve taken the time to look at the raw data. Open it in a spreadsheet, look at the columns and rows. This will give you a mental model going forward of what you’re dealing with. 
+
+</aside>
+
+
+## Visualizing the process
+
+<div style="color:green;margin:20px;margin-top:50px;" >
+*Step 1: Look at your data*
+</div>
+
+<div style="color:red;margin:20px;margin-top:50px;" >
+***Step 2: Get some numbers***
+</div>
+
+<img src="figs/03-eda-02.png">
+
+<aside class="notes">
+
+The second step is to calculate some summary statistics about these data. Means, medians, standard deviations, minimums, maximums, etc. These give us something to think about and equips us with some language for describing the measurements (i.e. “our average customer tenure is…”).
+
+</aside>
+
+
+## Visualizing the process
+
+<div style="color:green;margin:20px;margin-top:50px;" >
+*Step 1: Look at your data*
+</div>
+
+<div style="color:green;margin:20px;margin-top:50px;" >
+*Step 2: Get some numbers*
+</div>
+
+<div style="color:red;margin:20px;margin-top:50px;" >
+***Step 3: Make a graph***
+</div>
+
+<img src="figs/03-eda-03.png">
+
+<aside class="notes">
+
+The third step is to create visualizations for the data. This is the most important step, because visualization is an essentially human activity. A computer can’t interpret a graph, or be surprised by it. Pictures and images are how humans make sense of complex systems. Data are too complicated to be understood as bits of information in a spreadsheet--leave that to the computer. Get comfortable exploring the relationships between measurements using data visualizations.
+
+</aside>
 
