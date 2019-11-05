@@ -1,0 +1,129 @@
+---
+title: "Demystifying data science"
+author: "Paradigm Data Group"
+date: "11/4/2019"
+output: 
+  powerpoint_presentation:
+    slide_level: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Data Science as a Workflow for Insight and Automation
+
+```{r 01-slide-image-01, fig.height=2.5, fig.width=2.5}
+knitr::include_graphics(path = "figs/01-slide-image-01.png")
+```
+
+
+## Introduction
+
+:::::::::::::: {.columns}
+
+::: {.column}
+
+```{r mf-headshot}
+knitr::include_graphics(path = "figs/02-mf-headshot.png")
+```
+
+
+:::
+
+::: {.column}
+
+```{r ps-headshot}
+knitr::include_graphics(path = "figs/02-ps-headshot.png")
+```
+
+:::
+
+::::::::::::::
+
+
+::: notes
+
+**Peter Spangler:** Entrepreneurial minded data science leader with experience building analytic solutions, insights and teams at Lyft, Citrix and Alibaba Group. Led experimentation design and data science projects focused on retention, user acquisition and channel optimization in the SaaS and rideshare spaces. I have produced solutions for incrementality testing, segmentation, ML models and fraud. I am a passionate advocate for building analytics teams in cross-functional environments and believe communication is core to any analytics program.
+
+**Martin Frigaard:** Martin is a science and data evangelist providing analytic tools and skills to various audiences including medical professionals, engineers, product managers, and journalists. He received his leadership and team-building experience in the US Army and a non-commissioned officer and has a masters degree in clinical research from the University of California, San Francisco. He's worked with various universities, non-profits, and private companies. 
+
+:::
+
+
+## Agenda 
+
+- "*Computation Is Not Decision Making*"
+
+  + We need to ask the right questions of our data for our ML model to add the most business value.  
+  
+- "*Visualization is our most powerful tool*"
+
+  + We can surface actionable insights and areas of greatest impact by exploring relationships in our data.
+  
+- "*Sizing supports our stakeholders*"
+
+  + Uncovering the drivers of our business problem will inform necessary partnerships for action. 
+
+## Computation Is Not Decision Making (1)
+
+### 1. Improving business decisions
+
+This requires *both* data *and* domain knowledge (one will not suffice)
+
+::: notes
+
+It's assumed that you know about your products/services, the competition, and your customers. In order to use data to improve decision-making, you'll need to understand how to properly leverage what you already know about a topic (i.e. the domain knowledge). Computers can run models, but they can't tell you what's important.
+
+The key to using data successfully is 1) finding the right data and 2) knowing what attributes are important to your business.
+
+If the right data are being measured, and we can clearly define the problem, then data science can help.
+
+:::
+
+## Computation Is Not Decision Making (2)
+
+### 2. Set the stage 
+
+Be able to articulate, “*what problem are we facing?*”
+
+::: notes
+
+What decision needs to be made? What problem needs to be figured out? What numbers need to be calculated?  What is the "main thing"? Is it to reduce acquisition costs, increasing engagement, etc.? Remember, the main thing is to keep the main thing the main thing.
+
+:::
+
+## Computation Is Not Decision Making (3)
+
+### 3. Know the characters in the story
+
+Understand what's been measured, i.e. “*what are the data?*”
+
+::: notes
+
+What have we measured? What still needs to be measured? What can we do with the data we have? What new data will we need when we've used everything we have?
+
+Are you looking for answers based on the data you have, or based on the problem/question? It is possible that the important question you’re facing can’t be answered with the data you have (this just means the new problem is how to collect the data you need)
+
+:::
+
+## Computation Is Not Decision Making (4)
+
+### 4. Connect the business problem to a measurable objective
+
+The hardest part of data science is translating a problem into a question that data can answer (and then finding those data).
+
+::: notes
+
+Example measurable objective: “identify predictors for customer churn.”
+
+Other examples: 
+
+Did our recent marketing campaign improve customer engagement?  
+Have this customer’s buying patterns changed? If so, how?  
+How does the location of our products affect purchasing behaviors?  
+Who should we target with our new product/service?  
+
+The hardest part of using data to solve problems is asking questions in a way that a computer can answer them. We need to ask the question in a way where we can leverage the power of computation--this means fitting our objectives into a series of steps that a computer can execute.
+
+:::
