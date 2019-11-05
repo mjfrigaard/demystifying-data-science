@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Paradigm Data Group" />
+  <title>Demystifying data science</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="index_files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="index_files/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="reveal.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Demystifying data science</h1>
+    <h2 class="author">Paradigm Data Group</h2>
+    <h3 class="date">11/4/2019</h3>
+</section>
+
+<section id="data-science-as-a-workflow-for-insight-and-automation" class="slide level2">
+<h2>Data Science as a Workflow for Insight and Automation</h2>
+<p><img src="figs/01-slide-image-01.png" width="580" /></p>
+</section>
+<section id="introductions-who-are-we" class="slide level2">
+<h2>Introductions: Who are we?</h2>
+<p><img src="figs/02-mf-headshot.png"  height="300" width="300"></p>
+<p><strong>Martin Frigaard:</strong> Martin is a science and data evangelist providing analytic tools and skills to various audiences including medical professionals, engineers, product managers, and journalists. He received his leadership and team-building experience in the US Army and a non-commissioned officer and has a masters degree in clinical research from the University of California, San Francisco. He’s worked with various universities, non-profits, and private companies.</p>
+</section>
+<section id="introductions-who-are-we-1" class="slide level2">
+<h2>Introductions: Who are we?</h2>
+<p><img src="figs/02-ps-headshot.png"  height="300" width="300"></p>
+<p><strong>Peter Spangler:</strong> Entrepreneurial minded data science leader with experience building analytic solutions, insights and teams at Lyft, Citrix and Alibaba Group. Led experimentation design and data science projects focused on retention, user acquisition and channel optimization in the SaaS and rideshare spaces. I have produced solutions for incrementality testing, segmentation, ML models and fraud. I am a passionate advocate for building analytics teams in cross-functional environments and believe communication is core to any analytics program.</p>
+</section>
+<section id="agenda" class="slide level2">
+<h2>Agenda</h2>
+<ul>
+<li><p>“<strong><em>Computation Is Not Decision Making</em></strong>”</p>
+<ul>
+<li>We need to ask the right questions of our data for our models to add the most business value</li>
+</ul></li>
+<li><p>“<strong><em>Visualization is our most powerful tool</em></strong>”</p>
+<ul>
+<li>We can surface actionable insights and areas of greatest impact by exploring relationships in our data</li>
+</ul></li>
+<li><p>“<strong><em>Sizing supports our stakeholders</em></strong>”</p>
+<ul>
+<li>Uncovering the drivers of our business problem will inform necessary partnerships for action</li>
+</ul></li>
+</ul>
+</section>
+<section id="computation-is-not-decision-making-1" class="slide level2">
+<h2>Computation Is Not Decision Making (1)</h2>
+<h3 id="improving-business-decisions">1. Improving business decisions</h3>
+<div style="color:darkred;margin:20px;margin-top:50px;">
+<p>Using data effectively requires <b>both data and domain knowledge</b> (one will not suffice).</p>
+</div>
+<p style="margin:10px;font-size:70%;">
+<i> – click “S” to view speaker notes </i>
+</p>
+<aside class="notes">
+<p>It’s assumed that you know about your products/services, the competition, and your customers. In order to use data to improve decision-making, you’ll need to understand how to properly leverage what you already know about a topic (i.e. the domain knowledge). Computers can run models, but they can’t tell you what’s important.</p>
+<p>The key to using data successfully is 1) finding the right data and 2) knowing what attributes are important to your business.</p>
+<p>If the right data are being measured, and we can clearly define the problem, then data science can help.</p>
+</aside>
+</section>
+<section id="computation-is-not-decision-making-2" class="slide level2">
+<h2>Computation Is Not Decision Making (2)</h2>
+<h3 id="set-the-stage">2. Set the stage</h3>
+<div style="color:darkblue;margin:20px;margin-top:50px;">
+<p>Be able to articulate, <i>“what problem are we facing?”</i></p>
+</div>
+<p style="margin:10px;font-size:70%;">
+<i> – click “S” to view speaker notes </i>
+</p>
+<aside class="notes">
+<p>What decision needs to be made? What problem needs to be figured out? What numbers need to be calculated? What is the “main thing”? Is it to reduce acquisition costs, increasing engagement, etc.? Remember, the main thing is to keep the main thing the main thing.</p>
+</aside>
+</section>
+<section id="computation-is-not-decision-making-3" class="slide level2">
+<h2>Computation Is Not Decision Making (3)</h2>
+<h3 id="know-the-characters-in-the-story">3. Know the characters in the story</h3>
+<div style="color:darkred;margin:20px;margin-top:50px;">
+<p>Understand what’s been measured, i.e. <b>“what are the data?”</b></p>
+</div>
+<p style="margin:10px;font-size:70%;">
+<i> – click “S” to view speaker notes </i>
+</p>
+<aside class="notes">
+<p>What have we measured? What still needs to be measured? What can we do with the data we have? What new data will we need when we’ve used everything we have?</p>
+<p>Are you looking for answers based on the data you have, or based on the problem/question? It is possible that the important question you’re facing can’t be answered with the data you have (this just means the new problem becomes, “how to collect the data you need?”)</p>
+</aside>
+</section>
+<section id="computation-is-not-decision-making-4" class="slide level2">
+<h2>Computation Is Not Decision Making (4)</h2>
+<h3 id="connect-the-business-problem-to-a-measurable-objective">4. Connect the business problem to a measurable objective</h3>
+<div style="color:darkblue;margin:20px;margin-top:50px;">
+<p>The hardest part of data science is translating a problem into a question that data can answer (and then finding those data).</p>
+<p>Example measurable objective: “identify predictors for customer churn.”</p>
+</div>
+<p style="margin:10px;font-size:70%;">
+<i> – click “S” to view speaker notes </i>
+</p>
+<aside class="notes">
+<p>Other examples:</p>
+<p>Did our recent marketing campaign improve customer engagement?<br />
+Have this customer’s buying patterns changed? If so, how?<br />
+How does the location of our products affect purchasing behaviors?<br />
+Who should we target with our new product/service?</p>
+<p>The hardest part of using data to solve problems is asking questions in a way that a computer can answer them. We need to ask the question in a way where we can leverage the power of computation–this means fitting our objectives into a series of steps that a computer can execute.</p>
+</aside>
+</section>
+    </div>
+  </div>
+
+  <script src="index_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="index_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: true,
+        // Transition style
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'index_files/reveal.js-3.3.0.1/plugin/notes/notes.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>
